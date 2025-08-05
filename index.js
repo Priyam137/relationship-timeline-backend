@@ -78,13 +78,6 @@ app.put("/api/memories/:id", async (req, res) => {
   }
 });
 
-// ✅ Serve frontend if built (optional)
-const frontendPath = path.join(__dirname, "../client/build");
-app.use(express.static(frontendPath));
-app.get("/", (req, res) => {
-  res.sendFile(path.join(frontendPath, "index.html"));
-});
-
 // ✅ Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
