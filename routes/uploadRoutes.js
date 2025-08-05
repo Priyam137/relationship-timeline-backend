@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 // Multer config
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../uploads"));
+    cb(null, "/opt/render/project/src/uploads");
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);

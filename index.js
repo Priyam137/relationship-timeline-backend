@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static image files
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/uploads", express.static("/opt/render/project/src/uploads"));
 
 // Upload route
 app.use("/api/upload", uploadRoutes);
